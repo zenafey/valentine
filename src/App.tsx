@@ -16,7 +16,6 @@ interface Position {
 }
 
 function App() {
-    const [isRejection, setIsRejection] = useState(rejections[0])
     const [count, setCount] = useState<number>(1)
     const [exclamation, setExclamation] = useState('!')
     const [isValentine, setisValentine] = useState(false)
@@ -25,7 +24,6 @@ function App() {
     const changeRejections = () => {
         setExclamation((prev) => (prev += '!'))
         setCount((prev) => prev + 1)
-        setIsRejection(rejections[count])
 
         setPosition({
             left: `${Math.floor(Math.random() * 60 - 40) + 40}%`,
@@ -88,14 +86,15 @@ function App() {
                     >
                         Yes {exclamation}
                     </button>
-
-                    <button
-                        style={stylesBtnRefusual}
-                        className="btn-refusal"
-                        onClick={changeRejections}
-                    >
-                        {isRejection}
-                    </button>
+                    {count !== 6 && (
+                        <button
+                            style={stylesBtnRefusual}
+                            className="btn-refusal"
+                            onClick={changeRejections}
+                        >
+                            {rejections[count]}
+                        </button>
+                    )}
                 </>
             )}
         </div>
