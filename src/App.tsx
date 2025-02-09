@@ -16,7 +16,7 @@ interface Position {
 }
 
 function App() {
-    const [count, setCount] = useState<number>(1)
+    const [count, setCount] = useState(1)
     const [exclamation, setExclamation] = useState('!')
     const [isValentine, setisValentine] = useState(false)
     const [position, setPosition] = useState<Position>()
@@ -41,19 +41,19 @@ function App() {
                 count === 1
                     ? '22vw'
                     : count !== rejections.length
-                    ? `${(count ?? rejections.length) * 17}vw`
+                    ? `${count * 17}vw`
                     : '100vw',
             height:
                 count === 1
                     ? '7vh'
                     : count !== rejections.length
-                    ? `${(count ?? rejections.length) * 5}vh`
+                    ? `${count * 5}vh`
                     : '100vh',
             fontSize:
                 count === 1
                     ? ''
                     : count !== rejections.length
-                    ? `${(count ?? rejections.length) * 15}px`
+                    ? `${count * 15}px`
                     : '100px',
         }
     }, [count])
@@ -92,7 +92,7 @@ function App() {
                             className="btn-refusal"
                             onClick={changeRejections}
                         >
-                            {rejections[count]}
+                            {rejections[count - 1]}
                         </button>
                     )}
                 </>
