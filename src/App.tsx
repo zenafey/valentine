@@ -2,7 +2,7 @@ import { CSSProperties, useMemo, useState } from 'react'
 import catAnimation from '../public/yippee-happy.gif'
 
 const rejections: string[] = [
-    'Нет нет нет',
+    'Нет',
     'Ты уверена?',
     'Нет, подумай еще',
     "Я сейчас заплачу",
@@ -75,8 +75,7 @@ function App() {
                 </>
             ) : (
                 <>
-                    <h2 className="title">Будешь моей</h2>
-                    <h1 className="valentine">Половинкой?</h1>
+                    <h1 className="valentine">Пососёшь?</h1>
                     <button
                         style={stylesBtnAgree}
                         onClick={agree}
