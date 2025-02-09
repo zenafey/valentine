@@ -1,5 +1,5 @@
 import { CSSProperties, useMemo, useState } from 'react'
-import catAnimation from '../public/catValentine.gif'
+import catAnimation from '../public/yippee-happy.gif'
 
 const rejections: string[] = [
     'Нет нет нет',
