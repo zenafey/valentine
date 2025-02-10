@@ -3,7 +3,7 @@ import catAnimation from '../public/yippee-happy.gif'
 
 const rejections: string[] = [
     'Нет',
-    'Ты уверена?',
+    'Ты уверен?',
     'Нет, подумай еще',
     "Я сейчас заплачу",
     "Не могу поверить",
@@ -70,12 +70,12 @@ function App() {
         <div className="main">
             {isValentine ? (
                 <>
-                    <h2 className="title"> Я люблю тебя &hearts; </h2>
+                    <h2 className="title"> молодец &hearts; </h2>
                     <img alt="cat animation" src={catAnimation} />
                 </>
             ) : (
                 <>
-                    <h1 className="valentine">Пососёшь?</h1>
+                    <h1 className="valentine">Сосал?</h1>
                     <button
                         style={stylesBtnAgree}
                         onClick={agree}
